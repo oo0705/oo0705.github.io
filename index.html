@@ -1,101 +1,74 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
   <html lang="zh-CN">
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>oo0705的博客</title>
       <style>
-          * {
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-          }
+          * { margin: 0; padding: 0; box-sizing: border-box; }
           body {
-              font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              font-family: "Microsoft YaHei", Arial, sans-serif;
+              background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
               min-height: 100vh;
-              padding: 15px;
+              padding: 20px;
           }
           .container {
-              max-width: 900px;
+              max-width: 1000px;
               margin: 0 auto;
           }
           header {
               background: white;
-              padding: 20px;
+              padding: 25px;
               border-radius: 10px;
               text-align: center;
-              margin-bottom: 15px;
-              box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+              margin-bottom: 20px;
+              box-shadow: 0 4px 15px rgba(0,0,0,0.3);
           }
-          header h1 {
-              color: #667eea;
-              font-size: 1.8em;
-              margin-bottom: 8px;
-          }
-          header p {
-              color: #666;
-              font-size: 0.95em;
+          header h1 { color: #1e3c72; font-size: 2em; }
+          header p { color: #666; margin-top: 8px; }
+          .content {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 20px;
           }
           .card {
               background: white;
               padding: 20px;
               border-radius: 10px;
-              margin-bottom: 15px;
-              box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+              box-shadow: 0 4px 15px rgba(0,0,0,0.3);
           }
           .card h2 {
-              color: #333;
-              border-left: 4px solid #667eea;
-              padding-left: 12px;
-              margin-bottom: 15px;
+              color: #1e3c72;
               font-size: 1.2em;
+              margin-bottom: 15px;
+              border-bottom: 2px solid #2a5298;
+              padding-bottom: 8px;
           }
-          .card p {
-              line-height: 1.6;
-              color: #444;
-              margin-bottom: 12px;
-          }
-          .image-section {
-              margin: 15px 0;
-              padding: 15px;
-              background: #f8f9fa;
+          .card p { line-height: 1.7; color: #333; margin-bottom: 12px; }
+          .card img {
+              width: 100%;
               border-radius: 8px;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.2);
           }
-          .image-section h3 {
-              color: #555;
-              margin-bottom: 10px;
-              font-size: 1em;
-          }
-          .image-wrapper {
-              text-align: center;
-              margin: 12px 0;
-          }
-          .image-wrapper img {
-              max-width: 45%;
-              border-radius: 8px;
-              box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-              margin: 5px;
-          }
-          .image-info {
-              margin-top: 8px;
-              padding: 8px;
-              background: #e9ecef;
+          .path-info {
+              background: #f0f4ff;
+              padding: 10px;
               border-radius: 5px;
-              font-size: 0.85em;
-              color: #666;
+              font-size: 0.9em;
+              color: #555;
+              margin-top: 10px;
           }
-          .image-info code {
-              background: #dee2e6;
+          .path-info code {
+              background: #dce4ff;
               padding: 2px 6px;
               border-radius: 3px;
               font-family: Consolas, monospace;
           }
-          .footer {
+          footer {
               text-align: center;
               color: white;
-              padding: 15px;
-              font-size: 0.85em;
+              padding: 20px;
+              font-size: 0.9em;
           }
       </style>
   </head>
@@ -103,55 +76,40 @@
       <div class="container">
           <header>
               <h1>欢迎来到我的博客</h1>
-              <p>这是一个使用 GitHub Pages 托管的静态博客</p>
+              <p>GitHub Pages 静态博客 | 利用Github发布个人博客</p>
           </header>
 
-          <div class="card">
-              <h2>实验目的</h2>
-              <p>本博客用于完成"利用GitHub发布个人博客"实验，学习内容：了解 GitHub 基本使用方式、掌握 HTML
-  网页设计方法、理解相对路径和绝对路径概念。</p>
-          </div>
-
-          <div class="card">
-              <h2>图片路径演示</h2>
-              <p>下面展示两张图片，分别使用绝对路径和相对路径引用方式：</p>
-
-              <div class="image-section">
-                  <h3>绝对路径图片（引用网络URL）</h3>
-                  <div class="image-wrapper">
-                      <img
-  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Wikipedia-logo.png/200px-Wikipedia-logo.png"
-  alt="绝对路径示例">
-                  </div>
-                  <div class="image-info">
-                      <strong>引用方式：</strong> <code>绝对路径</code> - URL:
-  <code>https://upload.wikimedia.org/...</code>
+          <div class="content">
+              <div class="card">
+                  <h2>绝对路径图片</h2>
+                  <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="绝对路径图片">
+                  <div class="path-info">
+                      <strong>引用方式：</strong> <code>绝对路径</code><br>
+                      <strong>示例：</strong>
+  <code>https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png</code>
                   </div>
               </div>
 
-              <div class="image-section">
-                  <h3>相对路径图片（本地引用）</h3>
-                  <div class="image-wrapper">
-                      <img src="images/github.jpg" alt="相对路径示例-github.jpg">
-                      <img src="images/myblog.jpg" alt="相对路径示例-myblog.jpg">
-                  </div>
-                  <div class="image-info">
-                      <strong>引用方式：</strong> <code>相对路径</code> - 路径: <code>images/github.jpg</code> 和
-  <code>images/myblog.jpg</code>
+              <div class="card">
+                  <h2>相对路径图片</h2>
+                  <img src="images/github.jpg" alt="相对路径图片">
+                  <div class="path-info">
+                      <strong>引用方式：</strong> <code>相对路径</code><br>
+                      <strong>示例：</strong> <code>images/github.jpg</code>
                   </div>
               </div>
           </div>
 
-          <div class="card">
+          <div class="card" style="margin-top: 20px;">
               <h2>路径概念说明</h2>
-              <p><strong>绝对路径：</strong>完整的网络地址，以 http:// 或 https:// 开头，可以在任何地方访问。</p>
-              <p style="margin-top:8px;"><strong>相对路径：</strong>相对于当前文件的位置，如 images/photo.jpg
-  表示同级目录下的 images 文件夹中的文件。</p>
+              <p><strong>绝对路径：</strong>完整的网络地址，以 http:// 或 https:// 开头，可在全球任何地方访问。</p>
+              <p><strong>相对路径：</strong>相对于当前文件的位置，如 images/photo.jpg 表示同级 images
+  文件夹中的文件。</p>
           </div>
 
-          <div class="footer">
+          <footer>
               <p>Copyright © 2026 oo0705's Blog | Powered by GitHub Pages</p>
-          </div>
+          </footer>
       </div>
   </body>
   </html>
