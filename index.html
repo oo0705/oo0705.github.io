@@ -1,5 +1,4 @@
-
-  <!DOCTYPE html>
+ <!DOCTYPE html>
   <html lang="zh-CN">
   <head>
       <meta charset="UTF-8">
@@ -92,15 +91,6 @@
               border-radius: 3px;
               font-family: Consolas, monospace;
           }
-          .two-images {
-              display: flex;
-              justify-content: center;
-              gap: 10px;
-              flex-wrap: wrap;
-          }
-          .two-images img {
-              max-width: 48%;
-          }
           .footer {
               text-align: center;
               color: white;
@@ -142,12 +132,12 @@
               <div class="image-section">
                   <h3>相对路径图片（本地引用）</h3>
                   <div class="image-wrapper">
-                      <img src="../images/github.jpg" alt="相对路径示例-github.jpg">
-                      <img src="../images/myblog.jpg" alt="相对路径示例-myblog.jpg">
+                      <img src="images/github.jpg" alt="相对路径示例-github.jpg">
+                      <img src="images/myblog.jpg" alt="相对路径示例-myblog.jpg">
                   </div>
                   <div class="image-info">
-                      <strong>引用方式：</strong> <code>相对路径</code> - 路径: <code>../images/github.jpg</code> 和
-  <code>../images/myblog.jpg</code>
+                      <strong>引用方式：</strong> <code>相对路径</code> - 路径: <code>images/github.jpg</code> 和
+  <code>images/myblog.jpg</code>
                   </div>
               </div>
           </div>
@@ -155,8 +145,8 @@
           <div class="card">
               <h2>路径概念说明</h2>
               <p><strong>绝对路径：</strong>完整的网络地址，以 http:// 或 https:// 开头，可以在任何地方访问。</p>
-              <p style="margin-top:8px;"><strong>相对路径：</strong>相对于当前文件的位置，如 ../images/photo.jpg
-  表示上级目录下的 images 文件夹中的文件。</p>
+              <p style="margin-top:8px;"><strong>相对路径：</strong>相对于当前文件的位置，如 images/photo.jpg
+  表示同级目录下的 images 文件夹中的文件。</p>
           </div>
 
           <div class="footer">
